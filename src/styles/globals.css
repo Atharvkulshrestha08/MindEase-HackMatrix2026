@@ -1,0 +1,287 @@
+@import "tailwindcss";
+
+/* ═══════════════ DESIGN TOKENS ═══════════════ */
+:root {
+  /* Brand */
+  --primary: #006491;
+  --on-primary: #ffffff;
+  --primary-container: #5dade2;
+  --on-primary-container: #003f5d;
+  --primary-gradient: linear-gradient(135deg, #006491 0%, #0089c7 50%, #5dade2 100%);
+
+  --secondary: #006d3d;
+  --on-secondary: #ffffff;
+  --secondary-container: #7efbae;
+  --on-secondary-container: #007442;
+  --secondary-gradient: linear-gradient(135deg, #006d3d 0%, #00a856 100%);
+
+  --tertiary: #705d00;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #c3a304;
+  --on-tertiary-container: #473a00;
+
+  --error: #ba1a1a;
+  --on-error: #ffffff;
+  --error-container: #ffdad6;
+
+  /* Surfaces */
+  --surface: #f8f9ff;
+  --surface-dim: #f0f2fa;
+  --on-surface: #0d1c2e;
+  --on-surface-variant: #4a5568;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f4f6fc;
+  --surface-container: #eaedf7;
+  --surface-container-high: #e0e5f2;
+  --surface-container-highest: #d5dced;
+
+  --outline: #8892a0;
+  --outline-variant: #d0d7e2;
+
+  /* Premium Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 20, 40, 0.04);
+  --shadow-sm: 0 2px 8px -1px rgba(0, 20, 40, 0.06), 0 1px 4px -1px rgba(0, 20, 40, 0.04);
+  --shadow-md: 0 4px 16px -2px rgba(0, 20, 40, 0.08), 0 2px 8px -2px rgba(0, 20, 40, 0.04);
+  --shadow-lg: 0 8px 32px -4px rgba(0, 20, 40, 0.10), 0 4px 16px -4px rgba(0, 20, 40, 0.06);
+  --shadow-xl: 0 16px 48px -8px rgba(0, 20, 40, 0.12), 0 8px 24px -6px rgba(0, 20, 40, 0.08);
+  --shadow-2xl: 0 24px 64px -12px rgba(0, 20, 40, 0.16), 0 12px 32px -8px rgba(0, 20, 40, 0.10);
+  --shadow-colored: 0 8px 32px -4px rgba(0, 100, 145, 0.20), 0 4px 16px -4px rgba(0, 100, 145, 0.12);
+  --shadow-colored-lg: 0 16px 48px -8px rgba(0, 100, 145, 0.24), 0 8px 24px -6px rgba(0, 100, 145, 0.16);
+
+  /* Typography */
+  --font-heading: 'Poppins', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-3xl: 32px;
+  --radius-full: 9999px;
+}
+
+.dark {
+  --surface: #0f172a;
+  --surface-dim: #1e293b;
+  --on-surface: #f8fafc;
+  --on-surface-variant: #cbd5e1;
+  --surface-container-lowest: #020617;
+  --surface-container-low: #0b1120;
+  --surface-container: #1e293b;
+  --surface-container-high: #334155;
+  --surface-container-highest: #475569;
+  
+  --outline: #64748b;
+  --outline-variant: #334155;
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 2px 8px -1px rgba(0, 0, 0, 0.5), 0 1px 4px -1px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.6), 0 2px 8px -2px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px -4px rgba(0, 0, 0, 0.7), 0 4px 16px -4px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 16px 48px -8px rgba(0, 0, 0, 0.8), 0 8px 24px -6px rgba(0, 0, 0, 0.6);
+  --shadow-2xl: 0 24px 64px -12px rgba(0, 0, 0, 0.9), 0 12px 32px -8px rgba(0, 0, 0, 0.7);
+}
+
+/* ═══════════════ GLOBAL UTILITIES ═══════════════ */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--surface);
+  color: var(--on-surface);
+  line-height: 1.65;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+/* ═══════════════ TYPOGRAPHY ═══════════════ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  color: var(--on-surface);
+}
+
+/* ═══════════════ GLASSMORPHISM ═══════════════ */
+.glass {
+  background: rgba(248, 249, 255, 0.78);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.glass-strong {
+  background: rgba(248, 249, 255, 0.92);
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+/* ═══════════════ SCROLLBAR ═══════════════ */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--outline-variant);
+  border-radius: 100px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--outline); background-clip: content-box; }
+
+/* ═══════════════ SELECTION ═══════════════ */
+::selection {
+  background: color-mix(in srgb, var(--primary) 20%, transparent);
+  color: var(--on-surface);
+}
+
+/* ═══════════════ ANIMATIONS ═══════════════ */
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+.animate-breathe { animation: breathe 5s ease-in-out infinite; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+.animate-float { animation: float 7s ease-in-out infinite; }
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 100, 145, 0); }
+  50% { box-shadow: 0 0 24px 4px rgba(0, 100, 145, 0.12); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up { animation: fade-in-up 0.5s ease-out forwards; }
+
+/* ═══════════════ SAFE AREAS ═══════════════ */
+.safe-area-top { padding-top: env(safe-area-inset-top); }
+.safe-area-bottom { padding-bottom: env(safe-area-inset-bottom); }
+
+/* ═══════════════ REDUCED MOTION ═══════════════ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ═══════════════ PURCHASE BUTTON (Uiverse.io by Creatlydev) ═══════════════ */
+.purchase-btn {
+  text-decoration: none;
+  line-height: 1;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 16px -2px rgba(0, 20, 40, 0.08), 0 2px 8px -2px rgba(0, 20, 40, 0.04);
+  background-color: #fff;
+  color: #121212;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 15px;
+  transition: box-shadow 0.3s ease;
+}
+
+.purchase-btn:hover {
+  box-shadow: 0 8px 32px -4px rgba(0, 20, 40, 0.12), 0 4px 16px -4px rgba(0, 20, 40, 0.08);
+}
+
+.purchase-btn-decor {
+  position: absolute;
+  inset: 0;
+  background-color: var(--clr);
+  transform: translateX(-100%);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 0;
+}
+
+.purchase-btn-content {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+}
+
+.purchase-btn__icon {
+  width: 48px;
+  height: 42px;
+  background-color: var(--clr);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.purchase-btn__text {
+  display: inline-block;
+  transition: color 0.2s ease;
+  padding: 2px 1.5rem 2px 0.75rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.purchase-btn:hover .purchase-btn__text {
+  color: #fff;
+}
+
+.purchase-btn:hover .purchase-btn-decor {
+  transform: translate(0);
+}
+
+.purchase-btn:active {
+  transform: scale(0.97);
+}
+
+.purchase-btn:focus-visible {
+  outline: 2px solid var(--clr);
+  outline-offset: 2px;
+}
+
+/* Glassmorphic Overhauls */
+.glass-dock {
+  background: rgba(248, 249, 255, 0.65);
+  backdrop-filter: blur(40px) saturate(200%);
+  -webkit-backdrop-filter: blur(40px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 40px -10px rgba(0, 20, 40, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border: 1px solid rgba(0, 100, 145, 0.15);
+  box-shadow: 0 8px 32px -8px rgba(0, 100, 145, 0.12);
+}
+
+.glass-widget {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 24px;
+  box-shadow: var(--shadow-sm), inset 0 1px 2px rgba(255, 255, 255, 0.8);
+}
