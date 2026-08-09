@@ -36,7 +36,8 @@ MindEase 2.0 makes mental wellness interactive, personalized, and habit-forming:
 
 ## 🔗 Live Demonstration Link
 
-> ⏳ Deployment in progress — the live demo link will be added here once hosted (Netlify/Vercel/GitHub Pages).
+> 🚀 **Live at:** https://mindease-hackmatrix2026.netlify.app
+
 
 ---
 
