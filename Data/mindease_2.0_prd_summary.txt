@@ -1,0 +1,33 @@
+# MindEase 2.0: Product Requirements Document
+
+## Product Vision
+MindEase is a daily mental wellness ecosystem for students and young professionals. It focuses on AI guidance, personalized activities, habit building, and self-awareness through a playful yet premium experience.
+
+## Target Audience
+- Primary: College students (18-26)
+- Secondary: Young professionals, remote workers.
+
+## Design Philosophy
+- **Vibe:** Playful, calming, premium, modern, emotionally warm.
+- **Visuals:** Rounded components (20px), soft shadows, glassmorphism, smooth animations.
+- **Brand Colors:** 
+  - Primary: Soft Blue (#5DADE2)
+  - Secondary: Mint Green (#58D68D)
+  - Accent: Warm Yellow (#F4D03F)
+  - Warning: Soft Coral (#EC7063)
+  - Background: #F8FAFC (Light), #111827 (Dark)
+
+## Key Features & Screen List
+1. **Landing Page:** Hero with CTAs, benefits, and feature overview.
+2. **Authentication:** Modern login/signup with social options.
+3. **Dashboard:** Personalized greeting, mood card, activity widgets, and streaks.
+4. **AI Companion (Mind AI):** Conversational interface for emotional guidance and stress management.
+5. **Activities Hub:** Breathing, meditation, focus sessions, and music therapy.
+6. **Journal:** Rich text editor with AI reflection and emotion detection.
+7. **Insights:** Visualized mood trends, stress analysis, and activity reports.
+8. **Habit Garden:** Gamified habit tracking with growing plants.
+9. **Community:** Anonymous supportive space for sharing wins and challenges.
+
+## Tech & Performance
+- Stack: Next.js, React, Tailwind CSS.
+- Target: Under 2s load time, 95+ Lighthouse score.
