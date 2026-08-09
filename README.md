@@ -75,13 +75,13 @@ MindEase 2.0 makes mental wellness interactive, personalized, and habit-forming:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/Atharvkulshrestha08/MindEase-2.0.git
+git clone https://github.com/Atharvkulshrestha08/MindEase-HackMatrix2026.git
 ```
 
 Move into the project
 
 ```bash
-cd MindEase-2.0
+cd MindEase-HackMatrix2026
 ```
 
 Install dependencies
