@@ -45,7 +45,7 @@ MindEase 2.0 makes mental wellness interactive, personalized, and habit-forming:
 | Resource | View Online | Repository Copy |
 |---|---|---|
 | Presentation | [Google Slides](https://docs.google.com/presentation/d/1lnE0YPjvX57mgFiYUQq37LYXUiuflNUV/edit?usp=sharing&ouid=109118004055553738753&rtpof=true&sd=true) | [MindEase_Presentation.pptx](./MindEase_Presentation.pptx) |
-| Documentation | [Google Slides](https://drive.google.com/file/d/1XPPwfiDbRABg2pFg8eS4D2Tp0RIEf5QQ/view?usp=sharing) | [MindEase_Documentation.pdf](./MindEase_Presentation.pptx) |
+| Documentation | [Google Drive](https://drive.google.com/file/d/1XPPwfiDbRABg2pFg8eS4D2Tp0RIEf5QQ/view?usp=sharing) | [MindEase_Documentation.pdf](./MindEase_Presentation.pptx) |
 | Demo Video | [Google Drive](https://drive.google.com/file/d/1I4wFAytxQ9PBjU7uqhJy90I0XJ2UtwA6/view?usp=drivesdk) | [MindEase_Demo_Video.mp4](./MindEase_Demo_Video.mp4) (Git LFS) |
 
 ---
