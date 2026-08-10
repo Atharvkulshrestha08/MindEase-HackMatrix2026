@@ -71,7 +71,7 @@ MindEase 2.0 makes mental wellness interactive, personalized, and habit-forming:
 | Name | Role | GitHub |
 |---|---|---|
 | Atharv Kulshrestha | Project Lead · Frontend · UI/UX · AI Integration | [@Atharvkulshrestha08](https://github.com/Atharvkulshrestha08) |
-| Avika Tanwar | Frontend Designer · CSE (2nd Year) | _@github-handle_ |
+| Avika Tanwar | Frontend Designer · CSE (2nd Year) | [@avika2309](https://github.com/avika2309) |
 
 ---
 
